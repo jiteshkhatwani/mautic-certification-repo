@@ -80,7 +80,7 @@ Understanding the Mautic platform from a user perspective is essential for devel
 
 ### Official Reference Links
 - [Getting Started](https://docs.mautic.org/en/6.0/overview/overview.html)
-- [User Interface Guide](https://docs.mautic.org/en/6.0/dashboard/dashboard.html)
+- [Dashboard Overview](https://docs.mautic.org/en/6.0/dashboard/dashboard.html)
 - [Managing Contacts](https://docs.mautic.org/en/6.0/contacts/manage_contacts.html)
 
 ## Module 4: Configuring and Extending Mautic
@@ -404,7 +404,7 @@ Maintaining code quality is essential for contributing to Mautic or developing p
 
 ### Official Reference Links
 - [Continuous Integration](https://devdocs.mautic.org/en/6.0/plugins/continuous_integration.html)
-- [Testing Guide](https://devdocs.mautic.org/en/6.0/testing/e2e_test_suite.html)
+- [E2E Test Suite](https://devdocs.mautic.org/en/6.0/testing/e2e_test_suite.html)
 
 ## Module 17: Mautic Contribution Guide
 
@@ -552,6 +552,8 @@ Custom JavaScript and CSS allow for enhanced user experiences and specialized fu
 - Third-party library integration
 
 ### Official Reference Links
+- [MauticJS API](https://devdocs.mautic.org/en/6.0/mauticjs_api/tracking_script.html)
+- [Themes Getting Started](https://devdocs.mautic.org/en/6.0/themes/getting_started.html)
 
 ## Module 23: Database and Entities
 
@@ -573,8 +575,7 @@ Database knowledge is fundamental for Mautic development. This module covers the
 - Backup and recovery considerations
 
 ### Official Reference Links
-- [Plugin Data](https://devdocs.mautic.org/en/6.0/plugin_services/database.html)
-- [Database Service](https://devdocs.mautic.org/en/6.0/plugins/database.html)
+- [Entities and Schema](https://devdocs.mautic.org/en/6.0/plugins/database.html)
 
 ## Module 24: Understanding Mautic's Database Schema
 
@@ -596,7 +597,7 @@ A deep understanding of Mautic's database schema is essential for effective deve
 - Data archiving and cleanup
 
 ### Official Reference Links
-- [Plugin Data](https://devdocs.mautic.org/en/6.0/plugin_services/database.html)
+- [Entities and Schema](https://devdocs.mautic.org/en/6.0/plugins/database.html)
 
 ## Module 25: Working with Doctrine ORM in Mautic
 
@@ -618,7 +619,7 @@ Doctrine ORM is the database abstraction layer used in Mautic. Understanding Doc
 - Transaction management
 
 ### Official Reference Links
-- [Plugin Data](https://devdocs.mautic.org/en/6.0/plugin_services/database.html)
+- [Entities and Schema](https://devdocs.mautic.org/en/6.0/plugins/database.html)
 - [Doctrine Documentation](https://www.doctrine-project.org/projects/orm.html)
 
 ## Module 26: Creating Custom Entities
@@ -642,7 +643,7 @@ Custom entities allow developers to extend Mautic's data model for specific use 
 - Performance considerations
 
 ### Official Reference Links
-- [Plugin Data](https://devdocs.mautic.org/en/6.0/plugin_services/database.html)
+- [Entities and Schema](https://devdocs.mautic.org/en/6.0/plugins/database.html)
 - [Plugin MVC Pattern](https://devdocs.mautic.org/en/6.0/plugins/mvc.html)
 
 ## Module 27: Database Migrations and Schema Updates
@@ -665,8 +666,8 @@ Database migrations are essential for maintaining database schema consistency ac
 - Production deployment considerations
 
 ### Official Reference Links
-- [Plugin Data](https://devdocs.mautic.org/en/6.0/plugin_services/database.html)
-- [Plugin Schema Migration](https://devdocs.mautic.org/en/6.0/plugins/update_m4_to_m5.html)
+- [Entities and Schema](https://devdocs.mautic.org/en/6.0/plugins/database.html)
+- [Upgrading Plugins](https://devdocs.mautic.org/en/6.0/plugins/update_m4_to_m5.html)
 
 ## Module 28: Command Line Interface and Automation
 
@@ -700,7 +701,7 @@ Mautic's CLI provides powerful tools for administration, maintenance, and automa
 - [Cron Jobs](https://docs.mautic.org/en/6.0/configuration/cron_jobs.html)
 - [Command Line](https://docs.mautic.org/en/6.0/configuration/command_line_interface.html)
 - [Queue Processing](https://docs.mautic.org/en/6.0/queue/queue.html)
-- [Components Commands](https://devdocs.mautic.org/en/6.0/plugin_miscellaneous/commands.html)
+- [Symfony Console Commands](https://symfony.com/doc/current/console.html)
 
 ## Module 29: Event Listeners and Subscribers
 
@@ -723,8 +724,7 @@ Mautic's event system provides a powerful way to extend functionality without mo
 
 ### Official Reference Links
 - [Event Listeners](https://devdocs.mautic.org/en/6.0/plugins/event_listeners.html)
-- [Components Events](https://devdocs.mautic.org/en/6.0/plugin_miscellaneous/events.html)
-- [Event Dispatcher Service](https://devdocs.mautic.org/en/6.0/plugin_services/event_dispatcher.html)
+- [Symfony Event Dispatcher](https://symfony.com/doc/current/event_dispatcher.html)
 
 ## Module 30: Understanding Mautic Events
 
@@ -746,7 +746,6 @@ Mautic dispatches numerous events throughout its operation. Understanding these 
 - Security considerations
 
 ### Official Reference Links
-- [Components Events](https://devdocs.mautic.org/en/6.0/plugin_miscellaneous/events.html)
 - [Webhook Events](https://devdocs.mautic.org/en/6.0/webhooks/events/index.html)
 - [Event Listeners](https://devdocs.mautic.org/en/6.0/plugins/event_listeners.html)
 
@@ -771,8 +770,7 @@ Event listeners provide a simple way to respond to specific events in Mautic. Th
 
 ### Official Reference Links
 - [Event Listeners](https://devdocs.mautic.org/en/6.0/plugins/event_listeners.html)
-- [Components Events](https://devdocs.mautic.org/en/6.0/plugin_miscellaneous/events.html)
-- [Event Dispatcher Service](https://devdocs.mautic.org/en/6.0/plugin_services/event_dispatcher.html)
+- [Symfony Event Dispatcher](https://symfony.com/doc/current/event_dispatcher.html)
 
 ## Module 32: Using Event Subscribers
 
@@ -795,8 +793,7 @@ Event subscribers provide a more organized way to handle multiple related events
 
 ### Official Reference Links
 - [Event Listeners](https://devdocs.mautic.org/en/6.0/plugins/event_listeners.html)
-- [Components Events](https://devdocs.mautic.org/en/6.0/plugin_miscellaneous/events.html)
-- [Event Dispatcher Service](https://devdocs.mautic.org/en/6.0/plugin_services/event_dispatcher.html)
+- [Symfony Event Dispatcher](https://symfony.com/doc/current/event_dispatcher.html)
 
 ## Module 33: Email and Campaign Development
 
