@@ -223,7 +223,6 @@ From Mautic 6, Composer is the default way to install, update and manage Mautic.
 - Scaffolding, the files it writes, and automating it through Composer script hooks
 - Applying patches to packages with the patches plugin
 - Pinning the platform PHP version
-- Changing the web root from docroot to public for new and existing projects
 - Migrating a package install to Composer: minimum version, files to copy, directory swap, web server repoint
 - That the database is untouched by the switch and existing data is retained
 - Enabling full Composer management, which also enables the Marketplace
@@ -255,12 +254,12 @@ DDEV is Mautic's officially recommended local environment and its configuration 
 ### Key Topics
 - DDEV and Docker or Colima prerequisites
 - Starting Mautic with a clone and a single start command
-- Services provisioned: mail catcher, database administration and cache inspection tools
+- Services provisioned: MailHog, PHPMyAdmin and Redis Commander
 - The default host name and default credentials
 - Reading the shipped configuration: PHP version, web server type, database version, Composer version, upload directories, extra packages
 - The bootstrap script sequence and where it writes the local configuration file
 - Running console commands, the unit test suite and the end-to-end suite inside the container
-- Common DDEV verbs, including Xdebug enable and disable
+- Common DDEV verbs for starting, stopping and running commands inside the environment
 - Using DDEV to rehearse an update or reproduce a client bug
 
 ### Official Reference Links
@@ -296,7 +295,7 @@ Mautic exposes the same settings through three surfaces — the user interface, 
 - API settings and the default token lifetimes
 - Asset directory placement outside the public web root
 - IP lookup service configuration and the licence key format
-- The tokens reference and why it is not a configuration parameter reference
+- The tokens reference — contact fields, unsubscribe and web view links — which is separate from the configuration parameters
 - Environment file precedence, real environment variables winning, and the secrets prohibition
 - The uppercase prefixed environment variable mapping for any parameter, and production compilation
 
