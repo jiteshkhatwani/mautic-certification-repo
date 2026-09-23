@@ -2,7 +2,7 @@
 
 ## Course Overview
 
-This comprehensive curriculum is designed to train technical implementers to become certified Mautic integrators, covering everything from server fundamentals and installation through configuration, operations, deployment, security, theming and third-party integration. Where the Developer track certifies writing code inside Mautic, the Integrator track certifies the engineering discipline that gets Mautic installed, configured, connected, secured, upgraded and kept running in production. An Integrator is not expected to write core Mautic PHP, but is expected to read code, configure and troubleshoot at the file and command line level, wire Mautic to external systems, and make safe operational decisions under production constraints.
+This comprehensive curriculum is designed to train technical implementers to become certified Mautic integrators, covering everything from server fundamentals and installation through configuration, operations, deployment, security, theming and third-party integration. Where the Developer track certifies writing code inside Mautic, the Integrator track certifies the engineering discipline that gets Mautic installed, configured, connected, secured, upgraded and kept running in production. An Integrator is not expected to write or read core Mautic PHP, but is expected to work confidently with configuration files and the command line, wire Mautic to external systems, and make safe operational decisions under production constraints.
 
 ## Prerequisites
 
@@ -44,6 +44,7 @@ Choosing a Mautic version is a contractual decision as much as a technical one, 
 - [Mautic Release Strategy and LTS](https://mautic.org/blog/introducing-mautics-new-release-strategy-long-term-support-elts/)
 - [Extended Long Term Support](https://mautic.org/extended-long-term-support-elts/)
 - [Mautic Security](https://mautic.org/security)
+- [Mautic authorized as a CVE Numbering Authority (CNA)](https://mautic.org/blog/mautic-authorized-cve-numbering-authority-cna/)
 - [mautic/mautic](https://github.com/mautic/mautic)
 - [The Open Source Definition](https://opensource.org/osd)
 
@@ -563,7 +564,7 @@ Themes and templates are how a client's brand reaches emails, landing pages and 
 - [MJML Documentation](https://documentation.mjml.io/)
 - [Twig Documentation](https://twig.symfony.com/doc/3.x/)
 - [MDN CSS Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [MDN JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [MDN: Dynamic scripting with JavaScript](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting)
 
 ## Module 15: Email Infrastructure, Service Providers and Deliverability
 
