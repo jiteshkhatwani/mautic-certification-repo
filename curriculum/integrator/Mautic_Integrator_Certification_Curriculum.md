@@ -258,7 +258,7 @@ DDEV is Mautic's officially recommended local environment and its configuration 
 - DDEV and Docker or Colima prerequisites
 - Starting Mautic with a clone and a single start command
 - Services provisioned: mail catcher, database administration and cache inspection tools
-- The default host name and default credentials, and the password change at Mautic 5.1
+- The default host name and default credentials
 - Reading the shipped configuration: PHP version, web server type, database version, Composer version, upload directories, extra packages
 - The bootstrap script sequence and where it writes the local configuration file
 - Running console commands, the unit test suite and the end-to-end suite inside the container
@@ -287,8 +287,8 @@ DDEV is Mautic's officially recommended local environment and its configuration 
 Mautic exposes the same settings through three surfaces — the user interface, the local configuration file, and environment variables — and an integrator must know which surface wins. Because Mautic publishes no parameter reference page, the shipped bundle configuration files are frequently the only authoritative source for parameter names and defaults.
 
 ### Key Topics
-- The Configuration tabs in documented order, from System through Social settings
-- The local configuration file location in Mautic 6 and the change from earlier versions
+- The Configuration tabs and what each one controls
+- Where the local configuration file lives, and how its values relate to the settings shown in the UI
 - Path overrides for themes, media, plugins, translations and assets
 - Core parameters and defaults: site URL, cache and log paths, image and temp paths, theme, locale, timezone, date formats, page limit, cached data timeout
 - Site URL as the value cron jobs need to build absolute links
@@ -331,7 +331,7 @@ Most client-specific Mautic behaviour is configuration rather than code, and a d
 - Analysing and optimising field storage when approaching the leads table limit
 - Custom countries and regions files
 - Roles, the full system access switch, and the view, edit, create, delete, activate and full permission model
-- Own versus others scoping, and the export permission added in Mautic 5.1
+- Own versus others scoping, and the export permission
 - Permission notation for core and plugin bundles, and how permission bits are stored
 - User management, password rules, and the fact that Mautic sends no credential emails
 - Categories and the elements they apply to; tags and their segment filter operators and search syntax
@@ -372,7 +372,7 @@ Most client-specific Mautic behaviour is configuration rather than code, and a d
 Mautic does almost nothing on a schedule unless an integrator makes it, which makes cron configuration the single most common cause of "Mautic isn't working" tickets. Several commands have near-identical names and materially different effects.
 
 ### Key Topics
-- Crontab syntax and scheduling; the console path change at Mautic 3
+- Crontab syntax and scheduling; running Mautic commands from bin/console
 - The documented staggering example and the resulting processing order
 - Required jobs: segment update, campaign update, campaign trigger, marketing message queue send, custom field column creation
 - Batch size defaults and the flags that override them
