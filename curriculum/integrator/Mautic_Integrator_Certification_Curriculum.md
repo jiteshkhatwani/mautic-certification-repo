@@ -11,7 +11,7 @@ This comprehensive curriculum is designed to train technical implementers to bec
 - Understanding of web development (HTML, CSS, JavaScript)
 - Database administration basics (MySQL/MariaDB, dumps, users and privileges)
 - Git version control basics (clone, branch, commit, push, pull request)
-- DNS and TLS fundamentals (A records, certificates, HTTPS)
+- Awareness of what a Mautic instance needs from DNS and TLS: a domain pointing at the server and a valid HTTPS certificate, so that the Site URL can be set to an https address
 - Working knowledge of Mautic as an end user, at the level of the Mautic Marketer Certification
 
 ## Module 1: Open Source, the Mautic Project and the Release Cycle
@@ -132,7 +132,6 @@ Almost every Integrator task ultimately happens over SSH against a web server th
 - [POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html)
 - [chown(1) Linux manual page](https://man7.org/linux/man-pages/man1/chown.1.html)
 - [scp(1) OpenBSD manual page](https://man.openbsd.org/scp)
-- [Let's Encrypt Documentation](https://letsencrypt.org/docs/)
 
 ## Module 4: Database Server Basics and the Mautic Data Model
 
@@ -421,7 +420,7 @@ Mautic makes a tested backup a hard precondition for every update but publishes 
 - Failed-update recovery: cache clear, manual trigger, migration status, manual file replacement and which files to restore
 - The schema check endpoint, and the common memory and archive-extension failures
 - Restore ordering and validating a restore: version, error log, cron execution, test send
-- Rehearsing an update on a staging clone, including cron suspension, DNS, virtual host and site URL changes
+- Rehearsing an update on a staging clone, including cron suspension and the site URL change
 - Backup scheduling, retention and offsite storage as engagement policy
 
 ### Official Reference Links
@@ -501,7 +500,7 @@ Mautic stores personal data and sends mail on a client's behalf, which makes it 
 - The security advisory window and why version currency is itself a security control
 - Out-of-sequence release notice period
 - Data lifecycle: GDPR retention purge, CCPA do-not-sell pair, IP anonymisation and do-not-track lists
-- Install-time hardening: HTTPS, complex password, disabling table backup on a new install, restricting CORS domains
+- Install-time hardening: complex password, disabling table backup on a new install, restricting CORS domains, and confirming the instance is served over HTTPS
 - Ongoing maintenance: patch cadence, credential rotation, access review
 
 ### Official Reference Links
@@ -512,7 +511,6 @@ Mautic stores personal data and sends mail on a client's behalf, which makes it 
 - [Mautic Security Policy](https://github.com/mautic/mautic/blob/6.x/SECURITY.md)
 - [Mautic Security](https://mautic.org/security)
 - [Mautic Releases](https://mautic.org/releases/)
-- [Let's Encrypt Documentation](https://letsencrypt.org/docs/)
 
 ## Module 14: Themes, Email Templating, MJML, CSS and JavaScript
 
