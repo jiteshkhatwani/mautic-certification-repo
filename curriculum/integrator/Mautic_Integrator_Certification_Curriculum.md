@@ -82,7 +82,6 @@ Integrators fork Mautic, patch plugins, and increasingly submit fixes upstream, 
 - [Contributing as a Translator](https://contribute.mautic.org/en/latest/contributing/translator.html)
 - [Translations](https://docs.mautic.org/en/6.0/translations/translations.html)
 - [How do I test bug fixes and new features in Mautic?](https://kb.mautic.org/article/how-do-i-test-bug-fixes-and-new-features-in-mautic.html)
-- [Mautic Gitpod configuration](https://github.com/mautic/mautic/blob/6.x/.gitpod.yml)
 - [mautic/recommended-project](https://github.com/mautic/recommended-project)
 - [mautic/api-library](https://github.com/mautic/api-library)
 - [Git Reference](https://git-scm.com/docs)
@@ -537,7 +536,6 @@ Themes and templates are how a client's brand reaches emails, landing pages and 
 - Bundled MJML themes and the builder they require
 - Builder options: visual builder, legacy builder and code mode, and code mode's preview limitation
 - Enabling and disabling builders and clearing cache afterwards
-- Legacy builder slot markup: slots, containers, sections and section wrappers
 - Token syntax: contact fields with fallbacks, URL encoding and date formats; system and component tokens
 - Tracking pixel placement and explicit repositioning; custom builder fonts
 - CSS fundamentals and Mautic's styling controls: theme style toggle, theme form support, per-field attribute inputs, render style
@@ -559,7 +557,6 @@ Themes and templates are how a client's brand reaches emails, landing pages and 
 - [Tracking Script](https://docs.mautic.org/en/6.0/configuration/tracking_script.html)
 - [Tokens and Variables](https://docs.mautic.org/en/6.0/configuration/variables.html)
 - [Theme Directory Structure](https://devdocs.mautic.org/en/5.x/themes/getting_started.html)
-- [Legacy Builder Slots](https://devdocs.mautic.org/en/5.x/themes/legacy.html)
 - [GrapesJS Builder](https://devdocs.mautic.org/en/5.x/themes/grapesjs.html)
 - [Theme Forms](https://devdocs.mautic.org/en/5.x/themes/forms.html)
 - [MauticJS API](https://devdocs.mautic.org/en/5.x/mauticjs_api/tracking_script.html)
