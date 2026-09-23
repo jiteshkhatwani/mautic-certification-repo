@@ -10,7 +10,6 @@ This comprehensive curriculum is designed to train technical implementers to bec
 - Basic PHP literacy (reading configuration arrays, awareness of Symfony as a framework)
 - Understanding of web development (HTML, CSS, JavaScript)
 - Database administration basics (MySQL/MariaDB, dumps, users and privileges)
-- Git version control basics (clone, branch, commit, push, pull request)
 - Awareness of what a Mautic instance needs from DNS and TLS: a domain pointing at the server and a valid HTTPS certificate, so that the Site URL can be set to an https address
 - Working knowledge of Mautic as an end user, at the level of the Mautic Marketer Certification
 
@@ -48,47 +47,35 @@ Choosing a Mautic version is a contractual decision as much as a technical one, 
 - [mautic/mautic](https://github.com/mautic/mautic)
 - [The Open Source Definition](https://opensource.org/osd)
 
-## Module 2: Git, GitHub, Contribution and Translation
+## Module 2: Mautic Repositories, Releases and Translation
 
 ### Learning Objectives
-- Navigate the Mautic GitHub organisation and identify the repository for a given purpose
-- Fork, clone and branch correctly against Mautic's branching strategy
-- Prepare a pull request that meets Mautic's coding standard, test and documentation requirements
-- Explain Mautic's tiered code review and merge requirements
-- Test a pull request in a cloud environment without a local install
-- Contribute and consume Mautic translations
+- Find the Mautic repository, release or file you need on GitHub
+- Read shipped configuration defaults straight from the Mautic source files
+- Track releases and security advisories for the version a client runs
+- Report a problem with the detail Mautic asks for
+- Manage and contribute Mautic translations
 
 ### Context
-Integrators fork Mautic, patch plugins, and increasingly submit fixes upstream, because contributing is often the fastest route to getting a client-blocking bug fixed. Mautic's branching rules and tiered review requirements are specific, and a pull request that ignores them will not be merged.
+Mautic publishes no reference page for the settings held in the local configuration file, so the shipped configuration files in the Mautic repository are often the only authoritative source for a parameter name or its default. The same repository carries the releases and security advisories that tell an integrator when a client's instance needs attention. This module covers finding and reading that material, reporting problems and managing translations - none of which requires writing code or working with version control.
 
 ### Key Topics
-- Repositories, branches, tags and releases; the Mautic organisation and its core repositories
-- Reading shipped configuration defaults directly from bundle configuration files on GitHub
-- Branching strategy: pull requests target the next major branch, bug fixes target the release branch, features target the minor branch, breaking changes only on major branches
-- Forking to a personal account rather than an organisation, and why
-- Coding standards enforced by a pre-commit php-cs-fixer hook installed by Composer
-- Mandatory unit tests, and the PHPUnit, Codeception and PHPStan tooling
-- Rebasing against upstream, resolving conflicts and force-pushing safely
-- Code governance tiers and the review plus community-testing requirements of each
-- The roles of the Core Team, Product Team and Triage Team
-- Testing a pull request in a browser-based environment backed by the repository's DDEV configuration
-- Loading sample data for testing, and why it must never run against production
+- The Mautic organisation on GitHub and which repository holds what
+- Releases and tags, and identifying the release a client's instance is running
+- Reading shipped configuration defaults from the bundle configuration files
+- Watching releases and security advisories for a supported version
+- Reporting a problem: reproduction steps, the Mautic and PHP versions, and the errors found in the log files
 - Translation platform workflow, the daily language pack generation cycle, and forcing a pack refresh
 - System default language, per-user language, and string override files
 
 ### Official Reference Links
-- [Contributing as a Developer](https://contribute.mautic.org/en/latest/contributing/developer.html)
-- [Code Governance](https://contribute.mautic.org/en/latest/governance/code_governance.html)
-- [Contributing as a Tester](https://contribute.mautic.org/en/latest/contributing/tester.html)
 - [Contributing as a Translator](https://contribute.mautic.org/en/latest/contributing/translator.html)
 - [Translations](https://docs.mautic.org/en/6.0/translations/translations.html)
-- [How do I test bug fixes and new features in Mautic?](https://kb.mautic.org/article/how-do-i-test-bug-fixes-and-new-features-in-mautic.html)
+- [Mautic Releases](https://mautic.org/releases/)
+- [mautic/mautic](https://github.com/mautic/mautic)
 - [mautic/recommended-project](https://github.com/mautic/recommended-project)
 - [mautic/api-library](https://github.com/mautic/api-library)
-- [Git Reference](https://git-scm.com/docs)
 - [GitHub Repositories Documentation](https://docs.github.com/en/repositories)
-- [GitHub Pull Requests Documentation](https://docs.github.com/en/pull-requests)
-- [GitHub Codespaces Documentation](https://docs.github.com/en/codespaces)
 - [Transifex Help Center](https://help.transifex.com/en/)
 
 ## Module 3: Web Server, PHP/Symfony and Shell Fundamentals
@@ -140,7 +127,7 @@ Almost every Integrator task ultimately happens over SSH against a web server th
 - Configure Mautic's database connection parameters, including a table prefix
 - Run Doctrine schema and migration commands safely
 - Perform routine optimization and maintenance on Mautic's tables
-- Explain how Mautic defines its schema and why table names must never be hard-coded
+- Explain why the configured table prefix must be allowed for when querying the database
 
 ### Context
 Mautic is a write-heavy application whose tables grow continuously through tracking, campaign logs and email statistics. Integrators are regularly asked to answer questions the interface cannot, or to migrate data in and out, and doing so safely requires understanding how the schema is generated and which conventions constrain it.
@@ -149,9 +136,8 @@ Mautic is a write-heavy application whose tables grow continuously through track
 - Supported engines and minimum versions, and the InnoDB requirement
 - Connection parameters, table prefix, and the read-only replica host parameter
 - Mautic's documented MySQL global settings
-- Doctrine ORM as the schema definition layer and where entities live
-- The metadata builder, its common helpers, and the character cap on string and indexed fields
-- Configurable table prefixes and prefix-aware queries in migrations
+- That Mautic generates and owns its schema, so tables are not altered by hand
+- Configurable table prefixes, and allowing for them when querying the database directly
 - The reporting and statistics tables exposed through the stats endpoint
 - Contact, campaign, email, form, page and point log tables; audit log, IP address and webhook log tables
 - The Messenger queue table
@@ -162,13 +148,10 @@ Mautic is a write-heavy application whose tables grow continuously through track
 
 ### Official Reference Links
 - [Mautic Requirements](https://mautic.org/mautic-requirements/)
-- [Entities and Schema](https://devdocs.mautic.org/en/6.0/plugins/database.html)
 - [Stats API](https://devdocs.mautic.org/en/6.0/rest_api/stats.html)
 - [Troubleshooting](https://docs.mautic.org/en/6.0/troubleshooting/troubleshooting.html)
 - [Installing Mautic](https://docs.mautic.org/en/6.0/getting_started/how_to_install_mautic.html)
 - [Command Line Interface](https://docs.mautic.org/en/6.0/configuration/command_line_interface.html)
-- [Doctrine ORM](https://www.doctrine-project.org/projects/orm.html)
-- [Doctrine Migrations](https://www.doctrine-project.org/projects/migrations.html)
 - [MySQL OPTIMIZE TABLE](https://dev.mysql.com/doc/refman/8.0/en/optimize-table.html)
 - [MariaDB Documentation](https://mariadb.com/kb/en/documentation/)
 
@@ -246,7 +229,7 @@ From Mautic 6, Composer is the default way to install, update and manage Mautic.
 - Explain what DDEV provides and why Mautic standardises on it
 - Start a Mautic instance with DDEV from a clone of the repository
 - Identify the services DDEV provisions and how to reach them
-- Run Mautic console commands and test suites inside DDEV
+- Run Mautic console commands inside DDEV
 - Read the shipped DDEV configuration and explain what it pins
 
 ### Context
@@ -259,14 +242,13 @@ DDEV is Mautic's officially recommended local environment and its configuration 
 - The default host name and default credentials
 - Reading the shipped configuration: PHP version, web server type, database version, Composer version, upload directories, extra packages
 - The bootstrap script sequence and where it writes the local configuration file
-- Running console commands, the unit test suite and the end-to-end suite inside the container
+- Running Mautic console commands inside the container
 - Common DDEV verbs for starting, stopping and running commands inside the environment
 - Using DDEV to rehearse an update or reproduce a client bug
 
 ### Official Reference Links
 - [How to Install Mautic with DDEV](https://devdocs.mautic.org/en/6.0/development-environment/how_to_install_with_ddev.html)
 - [Installing Mautic](https://docs.mautic.org/en/6.0/getting_started/how_to_install_mautic.html)
-- [Contributing as a Developer](https://contribute.mautic.org/en/latest/contributing/developer.html)
 - [Mautic DDEV configuration](https://github.com/mautic/mautic/blob/6.x/.ddev/config.yaml)
 - [Local Mautic development with DDEV](https://mautic.org/blog/local-mautic-development-with-ddev/)
 - [DDEV Documentation](https://docs.ddev.com/en/stable/)
@@ -330,7 +312,6 @@ Most client-specific Mautic behaviour is configuration rather than code, and a d
 - Custom countries and regions files
 - Roles, the full system access switch, and the view, edit, create, delete, activate and full permission model
 - Own versus others scoping, and the export permission
-- Permission notation for core and plugin bundles, and how permission bits are stored
 - User management, password rules, and the fact that Mautic sends no credential emails
 - Categories and the elements they apply to; tags and their segment filter operators and search syntax
 - Stages, stage weight, and single-stage membership
@@ -344,7 +325,6 @@ Most client-specific Mautic behaviour is configuration rather than code, and a d
 - [Custom Fields](https://docs.mautic.org/en/6.0/contacts/custom_fields.html)
 - [Managing Roles](https://docs.mautic.org/en/6.0/users_roles/managing_roles.html)
 - [Managing Users](https://docs.mautic.org/en/6.0/users_roles/managing_users.html)
-- [Plugin Permissions](https://devdocs.mautic.org/en/6.0/plugins/permissions.html)
 - [Categories Overview](https://docs.mautic.org/en/6.0/categories/categories-overview.html)
 - [Tags](https://docs.mautic.org/en/6.0/contacts/tags.html)
 - [Stages](https://docs.mautic.org/en/6.0/stages/stages.html)
@@ -413,7 +393,7 @@ Mautic makes a tested backup a hard precondition for every update but publishes 
 - The Composer manifest and lock file as the codebase rollback mechanism
 - Installer-level table backup behaviour and the backup table prefix
 - Package update at the command line: find, apply, then finish
-- Composer update: version bumps, dependency update, scaffolding diff review, single-commit discipline, then the database command block
+- Composer update: version bumps, dependency update, scaffolding review, then the database command block
 - Update stability levels and why early-access releases never belong in production
 - Browser update deprecation and complete removal
 - Failed-update recovery: cache clear, manual trigger, migration status, manual file replacement and which files to restore
@@ -441,13 +421,13 @@ Mautic makes a tested backup a hard precondition for every update but publishes 
 - Recognise which production concerns Mautic does not document and plan for them explicitly
 
 ### Context
-Deployment is where installation, configuration and version control meet, and Mautic publishes no deployment guide, so the integrator assembles one from the Composer contract, the update procedure and general Symfony deployment practice. An instance that works in a demo will not necessarily survive a segment of half a million contacts.
+Deployment is where installation and configuration meet, and Mautic publishes no deployment guide, so the integrator assembles one from the Composer contract, the update procedure and general Symfony deployment practice. An instance that works in a demo will not necessarily survive a segment of half a million contacts.
 
 ### Key Topics
 - Hosting posture: dedicated or virtual private server, resource sizing, and why shared hosting fails
 - The web root contract as the one explicit web server instruction Mautic publishes
 - Deployment models: package upload, Composer build, and build-and-release pipelines
-- What belongs in version control and what must never be committed
+- Which files carry environment-specific settings, and why secrets never belong in shared files
 - Environment separation, environment file precedence, and production compilation of environment files
 - Configuration that changes per environment, starting with site URL
 - Handling media, uploads and generated assets across releases
@@ -697,7 +677,7 @@ To earn the Certified Mautic Integrator certification, candidates must:
 - **Passing Score**: 70%
 - **Question Distribution**:
   - Module 1 — Open Source, the Mautic Project and the Release Cycle: 8 questions
-  - Module 2 — Git, GitHub, Contribution and Translation: 10 questions
+  - Module 2 — Mautic Repositories, Releases and Translation: 10 questions
   - Module 3 — Web Server, PHP/Symfony and Shell Fundamentals: 8 questions
   - Module 4 — Database Server Basics and the Mautic Data Model: 8 questions
   - Module 5 — Installing Mautic without Composer: 9 questions
