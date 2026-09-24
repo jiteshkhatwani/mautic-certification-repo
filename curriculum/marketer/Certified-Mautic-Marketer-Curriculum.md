@@ -14,7 +14,7 @@ Every reference link points to the official Mautic 6.0 product documentation.
 ## Prerequisites
 
 - Working knowledge of digital marketing concepts (lead capture, nurture, segmentation, lifecycle stages)
-- Familiarity with email marketing practice and deliverability basics
+- Familiarity with email marketing practice
 - Access to a working Mautic 6.x instance with scheduled background jobs configured, for hands-on practice
 
 No installation or server administration skill is required, and none is assessed. Where a task belongs to an administrator, this curriculum teaches the Marketer to confirm it is in place, not to perform it.
@@ -256,6 +256,7 @@ The curriculum teaches the controls Mautic provides. What any particular organis
 - Creating a Preference Center landing page, preference tokens, setting preference pages in emails
 - Double opt-in as the record of a subscription
 - What the Marketer decides, and what belongs to the organisation's legal position
+- Where deliverability sits: sender authentication and domain reputation are administrator work and are not assessed here; the Marketer's contribution is list hygiene, frequency discipline and honouring unsubscribes
 
 ### Hands-On Exercise
 Build a preference centre page with channel and category options and link it from an email footer using the correct preference token. Then trace one contact end to end: what was tracked before they were known, what they have since chosen, and which of your planned sends would reach them.
@@ -666,7 +667,7 @@ Build three Focus Items — one of each type — and present the same one in two
 ### Learning Objectives
 - Explain how a Marketing Message delivers on a contact's preferred channel
 - Create a Marketing Message across multiple channels
-- Predict channel fallback behaviour under frequency rules
+- Predict channel fallback behaviour under frequency rules, and recognise which channels an instance actually has available
 
 ### Context
 A Marketing Message is one message that Mautic delivers on whichever channel the contact prefers, with Email as the default when no preference is set. It is the mechanism that turns channel preference from a stated wish into actual delivery behaviour, and it interacts directly with frequency rules.
@@ -677,17 +678,16 @@ A Marketing Message is one message that Mautic delivers on whichever channel the
 - Channels must be configured first or they do not appear as options
 - Enabling each channel and selecting or creating the message
 - Interaction with frequency rules and per-channel pausing — when a limit is exceeded Mautic uses another channel with available frequency
-- Sending text messages as a Marketing Message
+- How a second channel changes delivery, using SMS as the worked case — note that SMS needs a channel an administrator has configured, and is not assessed
 - Dynamic Web Content as the complementary on-site personalisation channel (taught in Module 20)
 
 ### Hands-On Exercise
-Create a Marketing Message with email and SMS variants, set a contact's channel preference in the preference centre, and confirm delivery follows the preference.
+Create a Marketing Message using the channels your instance has configured, set a contact's channel preference in the preference centre, and confirm delivery follows it. Then describe what would change if a second channel were enabled.
 
 ### Official Reference Links
 - [Marketing Messages](https://docs.mautic.org/en/6.0/channels/marketing_messages.html)
 - [What are Marketing Messages?](https://docs.mautic.org/en/6.0/channels/marketing_messages.html#what-are-marketing-messages)
 - [Creating a Marketing Message](https://docs.mautic.org/en/6.0/channels/marketing_messages.html#creating-a-marketing-message)
-- [Sending Text Messages as a Marketing Message](https://docs.mautic.org/en/6.0/channels/sms.html#sending-text-messages-as-a-marketing-messages)
 - [Preference center](https://docs.mautic.org/en/6.0/contacts/preference_center.html)
 
 ## Module 26: Introduction to Campaigns
@@ -730,7 +730,6 @@ Mautic will not let a campaign reference assets that do not yet exist. Segments,
 - Campaign prerequisites — segments, forms and emails must exist first
 - Campaign forms vs standalone forms in a campaign context
 - Template emails as campaign-callable assets
-- Creating text messages from the campaign builder
 
 ### Hands-On Exercise
 Prepare a complete campaign asset set before building any campaign: one segment, one campaign form, three template emails and one landing page.
@@ -739,7 +738,6 @@ Prepare a complete campaign asset set before building any campaign: one segment,
 - [Creating Campaigns — Prerequisites](https://docs.mautic.org/en/6.0/campaigns/creating_campaigns.html#prerequisites)
 - [Forms — Creating a new Form](https://docs.mautic.org/en/6.0/components/forms.html#creating-a-new-form)
 - [Emails — Template Emails](https://docs.mautic.org/en/6.0/channels/emails.html#template-emails)
-- [Creating Text Messages from Campaign Builder](https://docs.mautic.org/en/6.0/channels/sms.html#creating-text-messages-from-campaign-builder)
 
 ## Module 28: Building New Campaigns
 
