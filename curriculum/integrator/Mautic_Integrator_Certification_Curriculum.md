@@ -354,7 +354,7 @@ Mautic does almost nothing on a schedule unless an integrator makes it, which ma
 - The documented staggering example and the resulting processing order
 - Required jobs: segment update, campaign update, campaign trigger, marketing message queue send, custom field column creation
 - Batch size defaults and the flags that override them
-- The distinction between a maximum contacts cap and a maximum events cap
+- How a per-run contact cap differs from a per-batch size, and which of the segment, campaign rebuild and campaign trigger commands accept each
 - Campaign trigger ordering from newest to oldest since Mautic 5.1
 - Optional jobs: email queue consumption, monitored email fetch, social monitoring, imports, scheduled exports, webhooks, IP lookup, cleanup, do-not-sell, broadcasts, scheduled reports, integration sync, plugin reload
 - Why the queue consumer requires a memory, message or time limit under cron
