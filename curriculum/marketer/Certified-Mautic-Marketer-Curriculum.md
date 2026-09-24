@@ -144,31 +144,29 @@ Inspect your own role's permissions and identify which activities in this curric
 - [Managing Users](https://docs.mautic.org/en/6.0/users_roles/managing_users.html)
 - [Roles](https://docs.mautic.org/en/6.0/users_roles/managing_roles.html)
 
-## Module 6: Integrating Mautic with Other Systems
+## Module 6: Working with Integrated Systems
 
 ### Learning Objectives
-- Install and configure plugins from the Mautic Marketplace
-- Map fields between Mautic and an external system
-- Test and troubleshoot an integration
+- Describe what an existing integration makes available in Mautic, and what it does not
+- Specify the field mapping marketing needs, for an integrator to implement
+- Recognise when contact data is stale because a sync has failed
 
 ### Context
-Mautic is rarely the only system holding customer data. Integrations keep it aligned with a CRM or commerce platform, and field mapping is where a marketer's understanding of their own data model matters most.
+Mautic is rarely the only system holding customer data. Installing and configuring an integration is integrator work, but the Marketer is the one who knows which fields marketing actually needs, and the one who notices first when synced data stops arriving. This module covers consuming an integration, not building one.
 
 ### Key Topics
-- Using the Mautic Marketplace, plugin detail pages, versions and maintainers
-- Installing plugins
-- Field mapping between Mautic and third-party systems
-- Testing integrations and troubleshooting plugins
-- A worked CRM integration end to end
+- Which systems commonly integrate with Mautic, and what a plugin adds
+- How synced fields appear on a contact record, and how to tell them from fields Mautic owns
+- Using synced fields in segment filters and campaign conditions
+- The limits of a sync: direction, timing, and fields that do not come across
+- Spotting stale data, and what to report when a sync has stopped
 
 ### Hands-On Exercise
-Install one integration from the Marketplace, complete the field mapping for at least three contact fields, and run a test sync.
+Given a CRM field list, write the mapping specification you would hand an integrator: which Mautic fields must exist first, which segments and campaigns depend on them, and which direction each field needs to sync.
 
 ### Official Reference Links
 - [Mautic Marketplace](https://docs.mautic.org/en/6.0/marketplace/marketplace.html)
 - [Plugin resources](https://docs.mautic.org/en/6.0/plugins/plugin_resources.html)
-- [Salesforce plugin](https://docs.mautic.org/en/6.0/plugins/salesforce.html)
-- [HubSpot plugin](https://docs.mautic.org/en/6.0/plugins/hubspot.html)
 
 ## Module 7: Contact Fundamentals
 
@@ -570,32 +568,30 @@ Create one template email and one segment email for the same message. Schedule t
 ## Module 22: Designing Email Templates
 
 ### Learning Objectives
-- Build a branded, responsive email template using the builder
-- Install, preview and manage themes
+- Build a branded, responsive email template using the drag-and-drop builder
+- Apply and preview an approved theme
 - Run an A/B test on a segment email and declare a winner
-- Understand how email themes are structured and packaged
+- Work within an approved theme, and know what to ask a designer for when it does not fit
 
 ### Context
-Brand consistency across sends comes from themes, and the drag-and-drop builder is where a marketer assembles a template without writing code. A/B testing sits alongside this: it is how a template's subject line and content decisions get validated rather than assumed.
+Brand consistency across sends comes from themes, which a designer or administrator supplies. The drag-and-drop builder is where a Marketer assembles a template within that theme, without writing code. A/B testing sits alongside this: it is how a template's subject line and content decisions get validated rather than assumed.
 
 **Documentation caveat:** email A/B testing has no dedicated section in the Mautic 6.0 product documentation. The official procedure is published outside the product docs and is recorded in the companion caveats document.
 
 ### Key Topics
-- Email builder overview; enabling the builder
-- Templates, themes, custom fonts
-- Switching back to the legacy builder
-- Installing, previewing, hiding, downloading and deleting a theme; assigning a default theme
-- Why use email themes; head and body components; image asset relative URLs; saving the theme package
+- Email builder overview
+- Applying an approved theme; templates; custom fonts
+- Previewing a theme before committing to it
+- What a theme fixes and what the builder still lets you change
 - A/B testing: create the parent, create the variant, set traffic weight (the sum across all variants must be no more than 100%), choose winner criteria (asset download rate, email read rate, clickthrough rate, form submission rate), declare a winner. A/B testing is available for Segment emails only.
 - Translations, and previewing A/B and translation variants
 
 ### Hands-On Exercise
-Install a theme, build a branded template email from it with a header, two content blocks and a footer containing the unsubscribe and preference-centre links. Then create a segment email with two subject-line variants at 50/50 weight and set clickthrough rate as the winner criterion.
+Choose an approved theme, build a branded template email from it with a header, two content blocks and a footer containing the unsubscribe and preference-centre links. Then create a segment email with two subject-line variants at 50/50 weight and set clickthrough rate as the winner criterion.
 
 ### Official Reference Links
 - [Email & Landing Page Builder](https://docs.mautic.org/en/6.0/builders/email_landing_page.html)
 - [Manage Themes](https://docs.mautic.org/en/6.0/themes/manage_themes.html)
-- [Creating Themes](https://docs.mautic.org/en/6.0/builders/creating_themes.html)
 - [Emails — Translations](https://docs.mautic.org/en/6.0/channels/emails.html#translations)
 
 ## Module 23: Introduction to Focus Items
