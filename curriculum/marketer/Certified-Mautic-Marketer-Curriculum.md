@@ -9,7 +9,7 @@ Unlike the Developer track, this certification assumes no PHP, Symfony or comman
 **Target platform version:** Mautic 6.x
 **Reference documentation baseline:** `https://docs.mautic.org/en/6.0/`
 
-Every reference link in this document points to the official Mautic product documentation. Where the official documentation does not cover a topic, or where the only official coverage lives outside the product docs, this is recorded in the companion document **`Marketer-Curriculum-Reference-Caveats.md`** rather than filled with a substitute link.
+Every reference link points to the official Mautic 6.0 product documentation.
 
 ## Prerequisites
 
@@ -487,8 +487,6 @@ Embed the same form three ways — automatic embed, iframe and self-hosted — o
 ### Context
 Landing pages are where campaign traffic converts. Mautic's drag-and-drop builder lets a marketer assemble a responsive page without code, apply a branded theme, and schedule the page to be live only for a defined window.
 
-**Documentation caveat:** the Mautic 6.0 landing pages documentation page is an empty stub. This module is carried by the builder and theme documentation; the gap and its official workarounds are recorded in the companion caveats document.
-
 ### Key Topics
 - Setting up a simple landing page end to end
 - The drag-and-drop builder: blocks, styling, responsive design, structure panel, code view, asset manager
@@ -584,8 +582,6 @@ Create one template email and one segment email for the same message. Schedule t
 
 ### Context
 Brand consistency across sends comes from themes, which a designer or administrator supplies. The drag-and-drop builder is where a Marketer assembles a template within that theme, without writing code. A/B testing sits alongside this: it is how a template's subject line and content decisions get validated rather than assumed.
-
-**Documentation caveat:** email A/B testing has no dedicated section in the Mautic 6.0 product documentation. The official procedure is published outside the product docs and is recorded in the companion caveats document.
 
 ### Key Topics
 - Email builder overview
@@ -792,8 +788,6 @@ Build a five-step campaign containing at least one decision with both green and 
 ### Context
 A launched campaign is not a finished campaign. Marketers must be able to read the overview screen, quantify drop-off through Reports, and recognise the documented reasons a step silently fails — most commonly testing while logged in as an administrator, whose activity Mautic ignores.
 
-**Documentation caveat:** the Managing Campaigns page names each panel on the overview screen but does not explain how to interpret them, and there is no official page on reading campaign statistics. Reports is the substitute. See the companion caveats document.
-
 ### Key Topics
 - The campaign overview screen: Details drop-down, Campaign Statistics panel, Preview / Decisions / Actions / Conditions / Contacts tabs, Recent Activity panel
 - Where campaign numbers actually come from: the Campaign Events data source in Reports (Module 38)
@@ -919,7 +913,7 @@ Define a four-stage lifecycle (Subscriber, Lead, MQL, SQL), build the campaign a
 ### Context
 The welcome series is the canonical first campaign: a form captures a subscriber, a confirmation step records their opt-in, and a timed sequence builds the relationship. It exercises segments, forms, template emails, delays and decision branching together.
 
-**Documentation caveat:** Mautic 6.0 ships no example campaigns and no campaign template library. The official worked walkthroughs for this pattern are published outside the product documentation and are recorded in the companion caveats document.
+Mautic ships no example campaigns and no campaign template library, so this module is an applied build: it composes the segments, forms, emails, delays and decisions taught in earlier modules into one working sequence.
 
 ### Key Topics
 - Time-based drip pattern: segment entry, email 1 immediately, email 2 after 7 days, email 3 after 14 days
@@ -946,7 +940,7 @@ Build a complete double opt-in welcome series: form, confirmation email, welcome
 ### Context
 An event campaign is the clearest case of a time-driven campaign: everything is scheduled backwards from a fixed date. It also shows progressive profiling at its most useful, enriching a registrant's record across several touches rather than demanding everything up front.
 
-**Documentation caveat:** no official step-by-step tutorial exists for this campaign type. It is taught as an applied build exercise composing the documented mechanics below; the one official end-to-end account is recorded in the companion caveats document.
+This module is an applied build. There is no single feature to learn here — the campaign is assembled from mechanics taught earlier, and the references below point at each of those in turn.
 
 ### Key Topics
 - Time-driven campaign model
@@ -1006,7 +1000,7 @@ Create a birthday date custom field, build a date-based segment using an anniver
 ### Context
 Mautic has no survey feature, so structured feedback is collected with a form rather than a questionnaire. The documented pattern uses two campaigns: one that requests feedback and chases non-responders, and one that processes the response and branches on it.
 
-**Documentation caveat:** no customer-facing worked example exists in the product documentation. The structurally equivalent official example is published outside the product docs and is recorded in the companion caveats document.
+This module is an applied build, assembled from the campaign, form, stage and segment mechanics taught earlier.
 
 ### Key Topics
 - The two-campaign feedback-loop pattern:
