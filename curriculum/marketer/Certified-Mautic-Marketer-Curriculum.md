@@ -786,7 +786,7 @@ Build a five-step campaign containing at least one decision with both green and 
 
 ### Learning Objectives
 - Monitor a running campaign and interpret its statistics
-- Build a report to measure campaign performance
+- Quantify campaign drop-off using Reports, covered in Module 38
 - Diagnose the common reasons a campaign step fails to fire
 - Stop a running campaign safely
 
@@ -797,13 +797,13 @@ A launched campaign is not a finished campaign. Marketers must be able to read t
 
 ### Key Topics
 - The campaign overview screen: Details drop-down, Campaign Statistics panel, Preview / Decisions / Actions / Conditions / Contacts tabs, Recent Activity panel
-- Building a report against the Campaigns — Campaign Events data source for real metrics
+- Where campaign numbers actually come from: the Campaign Events data source in Reports (Module 38)
 - Why page visits are not recognised: testing while logged in as an administrator, contact not in the campaign, sequential execution, URL pattern matching without a wildcard
 - Campaign dependency on the scheduled background job
 - Stopping a campaign by unpublishing it
 
 ### Hands-On Exercise
-Deliberately break a campaign (for example a page-visit decision that never fires), diagnose it against the troubleshooting page, and fix it. Then build a report on campaign events to quantify drop-off.
+Deliberately break a campaign (for example a page-visit decision that never fires), diagnose it against the troubleshooting page, and fix it. Then use the Campaign Events data source, as taught in Module 38, to quantify the drop-off.
 
 ### Official Reference Links
 - [Managing Campaigns](https://docs.mautic.org/en/6.0/campaigns/managing_campaigns.html)
@@ -1031,13 +1031,56 @@ Build a post-purchase feedback campaign: stage-change entry, a one-click feedbac
 - [Tags](https://docs.mautic.org/en/6.0/contacts/tags.html)
 - [Frequency rules](https://docs.mautic.org/en/6.0/contacts/frequency_rules.html)
 
+## Module 38: Reports and Measurement
+
+### Learning Objectives
+- Choose the right data source for a marketing question
+- Build a report with the columns, filters, ordering and grouping that answer it
+- Add graphs, and reuse them in a Dashboard widget
+- Schedule a report for recurring delivery, and export its data
+
+### Context
+Every preceding module builds something. This one measures it. Reports is where marketing activity becomes numbers a Marketer can act on and defend — which emails earned engagement, which forms convert, where contacts fall out of a campaign. The skill is less about operating the report builder than about choosing the data source that can answer the question being asked, because each data source exposes a different set of columns, filters and graphs.
+
+### Key Topics
+- Getting to Reports, and what the reporting tools are for: tracking marketing metrics, identifying what is working or needs improvement, and investigating why something is happening
+- Data sources, and the parent/child pattern — the parent gives a high-level summary, the child a more granular view of contact behaviour including custom fields
+- The data sources that answer marketing questions:
+  - Emails, and Emails Sent
+  - Campaigns → Campaign Events
+  - Forms, and Form Submissions
+  - Assets, and Asset Downloads
+  - Contacts → Segment Membership, Do Not Contact, UTM Codes, Contact Point Log, and the attribution sources
+  - Pages → Landing Pages and Page hits
+  - Companies
+- Report details: name, description, published, visible for all logged-in Users, owner
+- Dynamic filter settings: opened by default, and hiding the date range
+- Data: choosing columns and why ID is recommended in every report; ordering, and how multiple order fields interact; filters, including the common Email Not Empty filter for identified contacts; dynamic filters for the reader
+- Group by, to show one row per contact rather than per event, and calculated columns — count, average, sum, minimum, maximum — which are only available alongside a grouping
+- Graphs, and using them in Dashboard widgets
+- Scheduling a report for delivery, and the scheduled job behind it
+- Report options and exporting; the totals row that calculated columns add is not included in an export
+
+### Hands-On Exercise
+Build three reports that answer three different questions: engagement for one segment's last email, form submissions grouped so each contact appears once, and campaign event drop-off for a running campaign. Add a graph to one, schedule it for weekly delivery, and export another to confirm what the export does and does not contain.
+
+### Official Reference Links
+- [Reports](https://docs.mautic.org/en/6.0/reports/reports.html)
+- [Data sources](https://docs.mautic.org/en/6.0/reports/reports.html#data-sources)
+- [Data — columns, order, filters, group by, calculated columns](https://docs.mautic.org/en/6.0/reports/reports.html#data)
+- [Graphs](https://docs.mautic.org/en/6.0/reports/reports.html#graphs)
+- [Schedule](https://docs.mautic.org/en/6.0/reports/reports.html#schedule)
+- [Cron job to schedule Reports](https://docs.mautic.org/en/6.0/reports/reports.html#cron-job-to-schedule-reports)
+- [Report options](https://docs.mautic.org/en/6.0/reports/reports.html#report-options)
+- [Exporting Reports](https://docs.mautic.org/en/6.0/reports/reports.html#exporting-reports)
+
 ---
 
 ## Certification Requirements
 
 To earn the Certified Mautic Marketer certification, candidates must:
 
-1. Complete all 37 modules
+1. Complete all 38 modules
 2. Pass the certification exam with a score of 80% or higher
 3. Pay the examination entry fee
 4. Verify identity via the online examination platform
