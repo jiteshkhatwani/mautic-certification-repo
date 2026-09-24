@@ -698,12 +698,12 @@ Create a Marketing Message with email and SMS variants, set a contact's channel 
 ## Module 26: Introduction to Campaigns
 
 ### Learning Objectives
-- Distinguish the three campaign models and select the right one
+- Recognise the three campaign types the documentation describes, and shape a campaign to the brief
 - Explain why a campaign is used rather than a one-off send
 - Explain how contacts enter and progress through a campaign
 
 ### Context
-Mautic documents three campaign models — time-driven, contact-driven and mixed — and choosing the wrong shape for a brief creates automation that either fires too early or never fires at all. This module settles that choice before any building begins.
+The documentation broadly categorises campaigns into three types: time driven, contact driven and mixed. They are a way of thinking about what starts a campaign and what carries a contact through it, not a fixed taxonomy to be memorised — most real campaigns mix timing and behaviour.
 
 ### Key Topics
 - Why use a campaign
@@ -713,7 +713,7 @@ Mautic documents three campaign models — time-driven, contact-driven and mixed
 - Mixed campaigns
 
 ### Hands-On Exercise
-Given three marketing briefs, classify each as time-driven, contact-driven or mixed, and justify the choice.
+Given three marketing briefs, describe for each what starts the campaign and what carries a contact through it, then say which type it leans toward and where the line blurs.
 
 ### Official Reference Links
 - [Campaigns overview](https://docs.mautic.org/en/6.0/campaigns/campaigns_overview.html)
