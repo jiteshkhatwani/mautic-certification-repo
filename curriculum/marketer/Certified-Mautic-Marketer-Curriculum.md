@@ -15,7 +15,6 @@ Every reference link in this document points to the official Mautic product docu
 
 - Working knowledge of digital marketing concepts (lead capture, nurture, segmentation, lifecycle stages)
 - Familiarity with email marketing practice and deliverability basics
-- Basic HTML/CSS reading ability, sufficient to paste a tracking script or adjust a template block
 - Access to a working Mautic 6.x instance with scheduled background jobs configured, for hands-on practice
 
 No installation or server administration skill is required, and none is assessed. Where a task belongs to an administrator, this curriculum teaches the Marketer to confirm it is in place, not to perform it.
@@ -25,7 +24,7 @@ No installation or server administration skill is required, and none is assessed
 ### Learning Objectives
 - Explain what Mautic is and the marketing problems it solves
 - Describe how contacts, components, channels and campaigns relate to one another
-- Identify where performance is assessed in the platform
+- Identify where marketing results are reported in the platform
 
 ### Context
 Mautic brings contact data, content components, delivery channels and automation into one platform. Before touching any single feature, a marketer needs the mental model of how those parts connect — this module establishes that map so every later module has somewhere to attach.
@@ -35,7 +34,7 @@ Mautic brings contact data, content components, delivery channels and automation
 - How Mautic works end to end
 - Contact management as the core data layer
 - Components vs Channels vs Campaigns
-- Assessing performance
+- Where marketing results surface: the Dashboard, and Reports (Module 38)
 
 ### Hands-On Exercise
 Walk an existing contact record end to end and narrate which part of the platform generated each piece of activity.
