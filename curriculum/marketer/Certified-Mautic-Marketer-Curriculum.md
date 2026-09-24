@@ -2,7 +2,7 @@
 
 ## Course Overview
 
-This comprehensive curriculum is designed to train marketers to become certified Mautic practitioners, covering everything from initial setup and contact management through segmentation, multi-channel components, campaign automation, lead scoring and real-world campaign builds.
+This comprehensive curriculum is designed to train marketers to become certified Mautic practitioners, covering everything from contact management through segmentation, multi-channel components, campaign automation, lead scoring and real-world campaign builds.
 
 Unlike the Developer track, this certification assumes no PHP, Symfony or command-line skill. It tests the ability to plan, build, launch and measure marketing programmes inside a running Mautic instance.
 
@@ -19,7 +19,7 @@ Every reference link in this document points to the official Mautic product docu
 - Access to a working Mautic 6.x instance with scheduled background jobs configured, for hands-on practice
 - Understanding of consent and data protection expectations in the candidate's region
 
-No installation or server administration skill is required to pass, though Module 2 covers setup at an awareness level.
+No installation or server administration skill is required, and none is assessed. Where a task belongs to an administrator, this curriculum teaches the Marketer to confirm it is in place, not to perform it.
 
 ## Module 1: Introduction to Mautic
 
@@ -44,29 +44,27 @@ Walk an existing contact record end to end and narrate which part of the platfor
 ### Official Reference Links
 - [Mautic overview](https://docs.mautic.org/en/6.0/overview/overview.html)
 
-## Module 2: Mautic Setup
+## Module 2: Tracking Setup and Instance Readiness
 
 ### Learning Objectives
-- Describe the available installation routes at an awareness level
-- Identify what a marketer must confirm is in place before campaigns can run
 - Deploy the tracking script and verify contacts are being tracked
+- Identify what must already be in place before campaigns can run
+- Recognise when a marketing result has failed for an instance reason, and escalate it accurately
 
 ### Context
-Marketers rarely install Mautic themselves, but they own the consequences when setup is incomplete. Nothing in Mautic automates itself without the scheduled background jobs, and no behaviour is tracked without the tracking script — so a marketer must be able to confirm both are in place before promising results.
+A Marketer does not install or administer Mautic. They do, however, own the consequences when the instance is not ready: nothing automates itself without the scheduled background jobs, and no behaviour is tracked without the tracking script. This module teaches the Marketer to confirm both, and to tell the difference between a campaign that is built wrong and an instance that is not running — so the right person is asked for the right fix.
 
 ### Key Topics
-- Production package, GitHub, Composer and DDEV install routes (awareness only)
-- Basic configuration after install
-- Required scheduled background jobs: segments, campaigns, custom fields
-- Optional scheduled jobs: email queue, monitored inbox, imports/exports, scheduled broadcasts
-- The tracking script: Global Configuration → Tracking Settings; the snippet; installing via a CMS integration
-- Tracking depth: tracking pixel, embedding the pixel, identify visitors by tracking URL, how contacts are tracked, cookies used by Mautic (first-party and third-party)
+- The tracking script: Global Configuration → Tracking Settings; the snippet; installing it through a CMS integration
+- Tracking depth: the tracking pixel, embedding the pixel, identifying visitors by tracking URL, how contacts are tracked
+- The scheduled background jobs marketing depends on: segments, campaigns, custom fields
+- Scheduled jobs behind specific features: the email queue and scheduled broadcasts
+- Reading a symptom correctly: a segment that does not fill, a campaign step that never fires, a visitor who leaves no record
 
 ### Hands-On Exercise
-Audit a Mautic instance: confirm which required scheduled jobs are running, deploy the tracking script to a test site, and verify a visitor record is created.
+Deploy the tracking script to a test page and confirm a visitor record appears. Then, given a segment that has not updated and a campaign step that has not fired, identify which scheduled job each is waiting on and write the escalation you would send to whoever administers the instance.
 
 ### Official Reference Links
-- [Installation](https://docs.mautic.org/en/6.0/getting_started/how_to_install_mautic.html)
 - [Cron jobs](https://docs.mautic.org/en/6.0/configuration/cron_jobs.html)
 - [Segment scheduled jobs](https://docs.mautic.org/en/6.0/configuration/cron_jobs.html#segment-cron-jobs)
 - [Campaign scheduled jobs](https://docs.mautic.org/en/6.0/configuration/cron_jobs.html#campaign-cron-jobs)
@@ -101,47 +99,46 @@ Build a marketing dashboard with at least four widgets, export it, and re-import
 - [Categories](https://docs.mautic.org/en/6.0/categories/categories-overview.html)
 - [Searching Mautic](https://docs.mautic.org/en/6.0/search/search_operators.html)
 
-## Module 4: How to Configure and Integrate Mautic
+## Module 4: Marketer-Facing Configuration
 
 ### Learning Objectives
-- Locate and interpret the configuration settings that affect marketing outcomes
-- Configure email transport, tracking and frequency defaults
-- Understand which settings are marketer-owned versus admin-owned
+- Locate and interpret the configuration settings that change marketing outcomes
+- Distinguish the settings a Marketer owns from those that belong to an administrator, and know what to ask for
 
 ### Context
-Proper configuration governs how the whole instance behaves. A marketer does not need to own every switch, but must be able to find the ones that decide whether opens are tracked, how often a contact can be messaged, and how imports and merges treat their data.
+Configuration governs how the whole instance behaves, but only part of it is the Marketer's to touch. Mail transport, queues and monitored inboxes are infrastructure. What a Marketer must be able to find and reason about are the settings that decide whether opens are tracked, how often a contact can be messaged, and how imports and merges treat their data.
 
 ### Key Topics
 - System settings and system defaults
-- Email settings: transport, queue, mail send settings, default frequency rule, monitored inbox, unsubscribe settings, open and link tracking
+- Open and link tracking
+- The default frequency rule, and unsubscribe settings
 - Contact settings: merge settings, list settings, import and export settings
-- Segment, Company, Landing Page, Form, Tracking and Report settings
-- Transactional vs marketing email and the consent implications
+- Segment, Company, Landing Page, Form and Tracking settings
+- Which settings are out of the Marketer's hands, and how to raise a change request for them
 
 ### Hands-On Exercise
-Configure email open and link tracking, set a default frequency rule, and document the change in a configuration log.
+Confirm email open and link tracking are enabled, set a default frequency rule, and produce a short list separating the settings you changed from the settings you would need an administrator to change.
 
 ### Official Reference Links
 - [Mautic configuration settings](https://docs.mautic.org/en/6.0/configuration/settings.html)
-- [Email settings](https://docs.mautic.org/en/6.0/configuration/settings.html#email-settings)
 
 ## Module 5: Users, Roles and Permissions
 
 ### Learning Objectives
-- Create user accounts and assign appropriate roles
-- Apply granular permissions so team members access only what they need
+- Explain what roles and permissions control in Mautic
+- Work effectively within the permissions you have, and request the ones you need
 
 ### Context
-Marketing teams share one Mautic instance, and an unrestricted account is the commonest cause of an accidental send. This module covers creating users and shaping roles so each team member can do their job and nothing more.
+Creating users and shaping roles is administrator work. A Marketer still needs to understand the model, because permissions are why a button is missing, why a publish fails, and why a colleague cannot see the segment you built. Understanding this turns a bug report into an access request.
 
 ### Key Topics
-- Creating a user: Settings → Users → +New; first/last name, roles, signature, position, credentials, time zone, language
-- Password requirements; Mautic does not email login credentials — they must be provided directly
-- Roles overview, full system access vs granular permissions
-- Explaining the permission options
+- What roles control, and how permissions surface in the interface as missing or disabled actions
+- Full system access versus granular permissions
+- The permission options and what each one allows
+- Recognising a permission problem rather than a platform fault
 
 ### Hands-On Exercise
-Create a "Campaign Editor" role that can build and edit emails and campaigns but cannot publish or delete, then assign it to a test user and verify the restriction.
+Inspect your own role's permissions and identify which activities in this curriculum you can perform, which need a colleague, and which need an administrator. Produce the access request you would send, naming the specific permissions required.
 
 ### Official Reference Links
 - [Managing Users](https://docs.mautic.org/en/6.0/users_roles/managing_users.html)
@@ -537,10 +534,10 @@ Place a Dynamic Web Content slot on a test page with default content, then serve
 - Choose between Template and Segment (Broadcast) emails
 - Personalise emails with tokens, signatures and owner-based sending
 - Send, schedule and test an email
-- Configure tracking, unsubscribes and bounce handling
+- Configure tracking and unsubscribe handling
 
 ### Context
-Email remains the primary channel for most Mautic users, and the first decision — Template or Segment email — determines how the message can be sent and whether it can be A/B tested. This module also covers the operational side a marketer is accountable for: tracking, unsubscribes and bounces.
+Email remains the primary channel for most Mautic users, and the first decision — Template or Segment email — determines how the message can be sent and whether it can be A/B tested. This module also covers the operational side a Marketer is accountable for: tracking and unsubscribes.
 
 ### Key Topics
 - Email types: Template emails, Segment (Broadcast) emails, excluding segments
@@ -553,11 +550,10 @@ Email remains the primary channel for most Mautic users, and the first decision 
 - Testing an email before sending
 - Tracking opened emails and tracking links in emails
 - Unsubscribing; online version; contact replies
-- Bounce management: monitored inbox, webhook bounce management, segment of bounced emails
 - Troubleshooting emails
 
 ### Hands-On Exercise
-Create one template email and one segment email for the same message. Schedule the segment email to send at a set time, verify the scheduled broadcast fires it, then build a segment of bounced addresses.
+Create one template email and one segment email for the same message. Schedule the segment email to send at a set time and verify the scheduled broadcast fires it.
 
 ### Official Reference Links
 - [Emails](https://docs.mautic.org/en/6.0/channels/emails.html)
@@ -567,7 +563,6 @@ Create one template email and one segment email for the same message. Schedule t
 - [Tokens](https://docs.mautic.org/en/6.0/channels/emails.html#tokens)
 - [Tracking Opened Emails](https://docs.mautic.org/en/6.0/channels/emails.html#tracking-opened-emails)
 - [Unsubscribing](https://docs.mautic.org/en/6.0/channels/emails.html#unsubscribing)
-- [Bounce management](https://docs.mautic.org/en/6.0/channels/emails.html#bounce-management)
 - [Troubleshooting Emails](https://docs.mautic.org/en/6.0/channels/emails.html#troubleshooting-emails)
 - [Send scheduled broadcasts (Segment Emails)](https://docs.mautic.org/en/6.0/configuration/cron_jobs.html#send-scheduled-broadcasts-segment-emails-cron-job)
 - [Process Email queue](https://docs.mautic.org/en/6.0/configuration/cron_jobs.html#process-email-queue-cron-job)
