@@ -1082,8 +1082,8 @@ To earn the Certified Mautic Marketer certification, candidates must:
 
 ## Exam Details
 
-- **Total Questions**: 100
-- **Duration**: 120 minutes
+- **Total Questions**: 60
+- **Duration**: 90 minutes
 - **Passing Score**: 80%
 - **Question Distribution** (drawn from the seven question-bank categories):
   - Getting Started and Configuration: 13%
@@ -1095,7 +1095,7 @@ To earn the Certified Mautic Marketer certification, candidates must:
   - Points, Stages and Real-World Campaigns: 11%
 - **Question Format**: scenario-based and direct multiple choice, four options each, with a small proportion of multiple-response questions
 
-> **Open decision:** total questions and duration mirror the Developer track and are not independently published for the Marketer track. The distribution above reflects the weighting of the accompanying 150-question bank.
+Sizing is set for a no-code track rather than inherited from the Developer track: 60 questions in 90 minutes allows a minute and a half per question, which suits scenario questions that require reading. The distribution reflects the weighting of the accompanying question bank, which questions are drawn from for each sitting.
 
 ## Continuing Education
 
