@@ -17,7 +17,6 @@ Every reference link in this document points to the official Mautic product docu
 - Familiarity with email marketing practice and deliverability basics
 - Basic HTML/CSS reading ability, sufficient to paste a tracking script or adjust a template block
 - Access to a working Mautic 6.x instance with scheduled background jobs configured, for hands-on practice
-- Understanding of consent and data protection expectations in the candidate's region
 
 No installation or server administration skill is required, and none is assessed. Where a task belongs to an administrator, this curriculum teaches the Marketer to confirm it is in place, not to perform it.
 
@@ -191,7 +190,7 @@ Identify a visitor record in the instance and trace which action converted a vis
 
 ### Learning Objectives
 - Add contacts individually and in bulk
-- Prepare and execute a compliant CSV import with correct field mapping
+- Prepare and execute a CSV import with correct field mapping
 - Use a background import to avoid browser timeouts on large files
 
 ### Context
@@ -236,27 +235,38 @@ Merge two duplicate contacts, add a custom field for "Industry", tag 20 contacts
 - [Manage Custom Fields](https://docs.mautic.org/en/6.0/contacts/custom_fields.html)
 - [Tags](https://docs.mautic.org/en/6.0/contacts/tags.html)
 
-## Module 10: Contact Preferences and Communication Frequency
+## Module 10: Consent, Tracking Permission and Communication Frequency
 
 ### Learning Objectives
+- Identify what Mautic tracks, and which controls govern it
 - Configure frequency rules to control contact fatigue
 - Build a preference centre and wire it into emails
+- Distinguish a marketing send from a transactional one, and know why it matters
 
 ### Context
-Deliverability and consent both depend on giving contacts control. Frequency rules cap how often anyone is messaged; the preference centre hands the choice of channel and topic to the contact, which is increasingly a compliance expectation rather than a courtesy.
+Consent is not a single setting in Mautic. It is spread across what the tracking script records, what the contact chooses in the preference centre, how often frequency rules allow a message, and whether a send counts as marketing or transactional. This module gathers those controls into one place so a Marketer can reason about them together, rather than meeting each one in isolation.
+
+The curriculum teaches the controls Mautic provides. What any particular organisation is required to do with them is a legal question and is deliberately out of scope.
 
 ### Key Topics
-- Frequency rules: global and per-contact
+- What Mautic records about a visitor: the tracking script, the tracking pixel, and the cookies Mautic sets
+- The Anonymize IP setting and what it is for
+- Frequency rules: global and per-contact, and the Do Not Contact limit
+- Transactional versus marketing email, and why only one of them is subject to the frequency limit
 - Preference centre: preferred channels and frequency, contact categories, contact segments, unsubscribe preferences
 - Creating a Preference Center landing page, preference tokens, setting preference pages in emails
-- Consent handling and its relationship to transactional vs marketing email
+- Double opt-in as the record of a subscription
+- What the Marketer decides, and what belongs to the organisation's legal position
 
 ### Hands-On Exercise
-Build a preference centre page with channel and category options and link it from an email footer using the correct preference token.
+Build a preference centre page with channel and category options and link it from an email footer using the correct preference token. Then trace one contact end to end: what was tracked before they were known, what they have since chosen, and which of your planned sends would reach them.
 
 ### Official Reference Links
 - [Frequency rules](https://docs.mautic.org/en/6.0/contacts/frequency_rules.html)
 - [Preference center](https://docs.mautic.org/en/6.0/contacts/preference_center.html)
+- [Cookies used by Mautic](https://docs.mautic.org/en/6.0/contacts/manage_contacts.html#cookies-used-by-mautic)
+- [Tracking settings, including Anonymize IP](https://docs.mautic.org/en/6.0/configuration/settings.html#tracking-settings)
+- [Contact settings, including the Do Not Contact frequency limit](https://docs.mautic.org/en/6.0/configuration/settings.html#contact-settings)
 
 ## Module 11: Adding and Managing Companies
 
@@ -908,7 +918,7 @@ Define a four-stage lifecycle (Subscriber, Lead, MQL, SQL), build the campaign a
 - Implement double opt-in as the entry point
 
 ### Context
-The welcome series is the canonical first campaign: a form captures a subscriber, a confirmation step establishes consent, and a timed sequence builds the relationship. It exercises segments, forms, template emails, delays and decision branching together.
+The welcome series is the canonical first campaign: a form captures a subscriber, a confirmation step records their opt-in, and a timed sequence builds the relationship. It exercises segments, forms, template emails, delays and decision branching together.
 
 **Documentation caveat:** Mautic 6.0 ships no example campaigns and no campaign template library. The official worked walkthroughs for this pattern are published outside the product documentation and are recorded in the companion caveats document.
 
