@@ -666,32 +666,35 @@ Mautic is rarely the only system in a client's stack, and an integrator's core v
 To earn the Certified Mautic Integrator certification, candidates must:
 
 1. Complete all 16 modules
-2. Pass the certification exam with a score of 70% or higher
-3. Submit a capstone project: a documented production-ready Mautic installation including cron, queue, backup and integration configuration
-4. Demonstrate one working integration built against the REST API or webhooks
+2. Pass the certification exam with a score of 80% or higher
+3. Pay the examination entry fee
+4. Verify identity via the online examination platform
 
 ## Exam Details
 
-- **Total Questions**: 150
-- **Duration**: 180 minutes
-- **Passing Score**: 70%
+- **Total Questions**: 75
+- **Duration**: 90 minutes
+- **Passing Score**: 80%
+- **Question Format**: four options each, with a small proportion of multiple-response questions
 - **Question Distribution**:
-  - Module 1 — Open Source, the Mautic Project and the Release Cycle: 8 questions
-  - Module 2 — Mautic Repositories, Releases and Translation: 10 questions
-  - Module 3 — Web Server, PHP/Symfony and Shell Fundamentals: 8 questions
-  - Module 4 — Database Server Basics and the Mautic Data Model: 8 questions
-  - Module 5 — Installing Mautic without Composer: 9 questions
-  - Module 6 — Composer, Packagist and the Mautic Marketplace: 10 questions
-  - Module 7 — Local Development with DDEV: 7 questions
-  - Module 8 — Mautic Configuration, UI and local.php: 13 questions
-  - Module 9 — Customizing Mautic and Configuration Best Practices: 9 questions
-  - Module 10 — Cron Jobs and Console Commands: 13 questions
-  - Module 11 — Updating Mautic, Backup and Restore: 9 questions
-  - Module 12 — Deployment and Preparing Mautic for Production: 8 questions
-  - Module 13 — Secure Setup and Maintenance: 8 questions
-  - Module 14 — Themes, Email Templating, MJML, CSS and JavaScript: 10 questions
-  - Module 15 — Email Infrastructure, Service Providers and Deliverability: 9 questions
-  - Module 16 — Integrations, Plugins, Webhooks and the REST API: 11 questions
+  - Module 1 — Open Source, the Mautic Project and the Release Cycle: 5.3%
+  - Module 2 — Mautic Repositories, Releases and Translation: 6.7%
+  - Module 3 — Web Server, PHP/Symfony and Shell Fundamentals: 5.3%
+  - Module 4 — Database Server Basics and the Mautic Data Model: 5.3%
+  - Module 5 — Installing Mautic without Composer: 6.0%
+  - Module 6 — Composer, Packagist and the Mautic Marketplace: 6.7%
+  - Module 7 — Local Development with DDEV: 4.7%
+  - Module 8 — Mautic Configuration, UI and local.php: 8.7%
+  - Module 9 — Customizing Mautic and Configuration Best Practices: 6.0%
+  - Module 10 — Cron Jobs and Console Commands: 8.7%
+  - Module 11 — Updating Mautic, Backup and Restore: 6.0%
+  - Module 12 — Deployment and Preparing Mautic for Production: 5.3%
+  - Module 13 — Secure Setup and Maintenance: 5.3%
+  - Module 14 — Themes, Email Templating, MJML, CSS and JavaScript: 6.7%
+  - Module 15 — Email Infrastructure, Service Providers and Deliverability: 6.0%
+  - Module 16 — Integrations, Plugins, Webhooks and the REST API: 7.3%
+
+The sitting is sized to match the published Mautic Developer examination: 75 questions in 90 minutes, passed at 80%. The distribution above is held in every sitting.
 
 ## Continuing Education
 
@@ -699,4 +702,3 @@ Certified integrators are encouraged to:
 - Stay active in the Mautic community
 - Contribute to the Mautic project
 - Maintain knowledge of new versions, release cycles and security advisories
-- Recertify every 2 years
